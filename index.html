@@ -1,107 +1,142 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Lorenzo De Sanctis</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+    <title>Lorenzo De Sanctis | Biomechanical Engineer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Biomechanical engineer specializing in 3D kinematics and imaging for human movement analysis.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
 
-			<div id="wrapper">
+    <div class="ambient-light"></div>
 
-					<header id="header" class="alt">
-						<a href="index.html" class="logo">Lorenzo <span><strong>De Sanctis</strong></span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+    <nav id="navbar">
+        <div class="logo">Lorenzo <strong>De Sanctis</strong></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="https://www.linkedin.com/in/lorenzo-desanctis-03/" target="_blank" class="btn-connect">Connect <i class="fab fa-linkedin"></i></a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
 
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="https://www.linkedin.com/in/lorenzo-desanctis-03/">Connect</a></li>
-						</ul>
-					</nav>
+    <section id="home" class="hero">
+        <div class="hero-content fade-in-up">
+            <span class="tagline">Comprehensive Motion Analysis</span>
+            <h1>3D Kinematics <br><span class="gradient-text">& Imaging</span></h1>
+            <p>
+                From ultrasound imaging to wearable sensors. I build open tools to analyze 
+                human movement, bridging the gap between 
+                computer vision and clinical biomechanics.
+            </p>
+            <div class="hero-btns">
+                <a href="#assets/work" class="btn primary">See the Data</a>
+                <a href="about.html" class="btn secondary">My Approach</a>
+            </div>
+        </div>
 
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>Hi, I'm Lorenzo</h1>
-							</header>
-							<div class="content">
-								<p>Biomechanical engineer specializing in 3D kinematics of human movement.</p>
-								<ul class="actions">
-									<li><a href="about.html" class="button next scrolly">About</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
+        <div class="hero-visual">
+            <div class="scene-3d">
+                <div class="ref-system global">
+                    <div class="axis x-axis"><span class="label">X</span></div>
+                    <div class="axis y-axis"><span class="label">Y</span></div>
+                    <div class="axis z-axis"><span class="label">Z</span></div>
+                </div>
+                
+                <div class="ref-system local">
+                    <div class="axis x-axis"></div>
+                    <div class="axis y-axis"></div>
+                    <div class="axis z-axis"></div>
+                    <div class="connection-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-					<div id="main">
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/UltrasoundProj.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://doi.org/10.3390/diagnostics14141501" class="link" target="_blank">Freehand 3D Ultrasound</a></h3>
-										<p>using computer vision</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/ProximalUlna.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://doi.org/10.1016/j.jbiomech.2025.112643" class="link" target="_blank">Humeral Axial Rotation Measurement</a></h3>
-										<p>the indirect tracking method</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/MDisplacement.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="work/displacement.pdf" class="link" target="_blank">Marker displacement</a></h3>
-										<p>Soft tissue artifacts in the upper arm</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/Scaption.jpeg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="work/scaption.pdf" class="link" target="_blank">Scaption Assistance</a></h3>
-										<p>Tracking the scapular plane using laser</p>
-									</header>
-								</article>
-							</section>
-					</div>
+    <section id="assets/work" class="container">
+        <header class="section-header scroll-reveal">
+            <h2>Selected Research</h2>
+            <p>Exploring accuracy, repeatability, and accessibility in biomechanics.</p>
+        </header>
 
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://scholar.google.com/citations?user=BS29bRMAAAAJ&hl=it" class="icon brands alt fa-google-scholar"><span class="label">Google Scholar</span></a></li>
-								<li><a href="https://github.com/LorenzoDeSanctis" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/lorenzo-desanctis-03/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; 2025 Lorenzo De Sanctis</li>
-							</ul>
-						</div>
-					</footer>
+        <div class="grid-projects">
+            <article class="card scroll-reveal">
+                <div class="card-image" style="background-image: url('assets/images/UltrasoundProj.jpg');">
+                    <div class="overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h3>Freehand 3D Ultrasound</h3>
+                    <p class="subtitle">Imaging & Vision</p>
+                    <p class="desc">Low-cost volumetric reconstruction using single-camera ArUco tracking.</p>
+                    <a href="https://doi.org/10.3390/diagnostics14141501" target="_blank" class="link-arrow">Read Paper <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
 
-			</div>
+            <article class="card scroll-reveal">
+                <div class="card-image" style="background-image: url('assets/images/ProximalUlna.jpg');">
+                    <div class="overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h3>Humeral Axial Rotation</h3>
+                    <p class="subtitle">Kinematic Protocol</p>
+                    <p class="desc">Innovative protocols for measuring rotation without complex setups.</p>
+                    <a href="https://doi.org/10.1016/j.jbiomech.2025.112643" target="_blank" class="link-arrow">Read Paper <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
 
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
+            <article class="card scroll-reveal">
+                <div class="card-image" style="background-image: url('assets/images/MDisplacement.jpg');">
+                    <div class="overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h3>Marker Displacement</h3>
+                    <p class="subtitle">Soft Tissue Artifacts</p>
+                    <p class="desc">Quantifying error in upper arm motion tracking due to skin deformation.</p>
+                    <a href="assets/work/displacement.pdf" target="_blank" class="link-arrow">View PDF <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="card scroll-reveal">
+                <div class="card-image" style="background-image: url('assets/images/Scaption.jpeg');">
+                    <div class="overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h3>Scaption Assistance</h3>
+                    <p class="subtitle">Real-time Feedback</p>
+                    <p class="desc">Laser-guided feedback system for tracking the scapular plane.</p>
+                    <a href="assets/work/scaption.pdf" target="_blank" class="link-arrow">View PDF <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="social-links">
+            <a href="https://scholar.google.com/citations?user=BS29bRMAAAAJ&hl=it" title="Google Scholar"><i class="fab fa-google-scholar"></i></a>
+            <a href="https://github.com/LorenzoDeSanctis" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/lorenzo-desanctis-03/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Lorenzo De Sanctis. Designed with precision.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if(window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
+    </script>
+</body>
 </html>
