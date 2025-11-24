@@ -340,17 +340,80 @@ h1 {
 .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* --- RESPONSIVE --- */
+
 @media (max-width: 1200px) {
     .hero-visual { transform: translateY(-50%) scale(0.8); right: -50px; }
 }
+
 @media (max-width: 980px) {
     .hero-visual { opacity: 0.2; transform: translateY(-50%) scale(0.6); }
     .bio-section { flex-direction: column-reverse; }
 }
+
 @media (max-width: 768px) {
-    h1 { font-size: 3rem; }
-    .hero { padding: 120px 5% 60px; display: block; }
-    .hero-visual { position: relative; width: 100%; height: 350px; right: auto; top: 0; transform: scale(0.7); opacity: 0.5; margin-top: -50px; }
+    /* 1. SISTEMAZIONE TITOLO */
+    h1 { font-size: 2.5rem; }
+    
+    /* 2. LAYOUT HERO */
+    .hero { 
+        padding: 100px 5% 40px; /* Meno padding sopra */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Allinea in alto */
+    }
+
+    /* 3. ANIMAZIONE (Spostata in basso) */
+    .hero-visual {
+        position: relative; /* Non più absolute su mobile */
+        width: 100%;
+        height: 300px; /* Altezza dedicata all'animazione */
+        right: auto;
+        top: auto;
+        transform: scale(0.8); /* Leggermente più piccola */
+        opacity: 0.6;
+        
+        /* QUI LA SPOSTIAMO IN BASSO */
+        margin-top: 40px;  /* Spinge via il testo */
+        margin-bottom: 20px;
+    }
+    
+    /* Correzione angolazione per mobile */
     .scene-3d { transform: rotateX(-10deg) rotateY(-20deg); }
-    .nav-links { display: none; } .menu-toggle { display: block; }
+
+    /* 4. MENU MOBILE (Stile a tendina "Glass") */
+    .menu-toggle { 
+        display: block; 
+        z-index: 1001; /* Sopra a tutto */
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%; /* Larghezza del menu laterale */
+        background: rgba(11, 12, 16, 0.98); /* Sfondo quasi opaco */
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        border-left: 1px solid var(--border);
+        
+        /* Animazione ingresso */
+        transform: translateX(100%); /* Nascosto a destra */
+        transition: transform 0.4s ease-in-out;
+        z-index: 1000;
+        display: flex; /* Importante: sovrascrive il display:none precedente */
+    }
+
+    /* Classe aggiunta dal JS quando clicchi */
+    .nav-links.mobile-active {
+        transform: translateX(0); /* Porta il menu dentro lo schermo */
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem; /* Testo più grande su mobile */
+    }
 }
