@@ -364,17 +364,15 @@ h1 {
 
     /* 3. ANIMAZIONE (Spostata in basso) */
     .hero-visual {
-        position: relative; /* Non più absolute su mobile */
+        position: relative;
         width: 100%;
-        height: 300px; /* Altezza dedicata all'animazione */
+        height: 300px;
         right: auto;
         top: auto;
-        transform: scale(0.8); /* Leggermente più piccola */
+        transform: scale(0.8);
         opacity: 0.6;
-        
-        /* QUI LA SPOSTIAMO IN BASSO */
-        margin-top: 40px;  /* Spinge via il testo */
-        margin-bottom: 20px;
+        margin-top: 30vh; 
+        margin-bottom: 0vh;
     }
     
     /* Correzione angolazione per mobile */
