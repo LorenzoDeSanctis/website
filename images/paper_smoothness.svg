@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#ffffff"/>
+  <!-- axes -->
+  <line x1="52" y1="60" x2="52" y2="352" stroke="#c9c9c9" stroke-width="3"/>
+  <line x1="52" y1="352" x2="376" y2="352" stroke="#c9c9c9" stroke-width="3"/>
+  <text x="56" y="46" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#8a8a8a">velocity</text>
+  <text x="376" y="376" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#8a8a8a">time</text>
+  <!-- pathological: jerky, multi-peak -->
+  <path d="M 62 348
+           C 92 330, 102 225, 126 213
+           C 141 206, 146 252, 161 242
+           C 176 232, 177 152, 196 146
+           C 211 142, 213 202, 229 196
+           C 246 190, 251 132, 268 142
+           C 285 152, 286 242, 301 252
+           C 321 264, 332 332, 370 348"
+        fill="none" stroke="#f09228" stroke-width="7" stroke-linecap="round"/>
+  <!-- healthy: one smooth bell -->
+  <path d="M 62 348 C 130 348, 150 120, 216 120 C 282 120, 302 348, 370 348"
+        fill="none" stroke="#1772d0" stroke-width="7" stroke-linecap="round"/>
+  <!-- legend -->
+  <line x1="240" y1="70" x2="272" y2="70" stroke="#1772d0" stroke-width="7" stroke-linecap="round"/>
+  <text x="280" y="76" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#555555">healthy</text>
+  <line x1="240" y1="98" x2="272" y2="98" stroke="#f09228" stroke-width="7" stroke-linecap="round"/>
+  <text x="280" y="104" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#555555">pathological</text>
+</svg>
